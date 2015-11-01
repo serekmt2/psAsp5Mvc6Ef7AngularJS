@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/styles/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="sidebar">
+        <img class="headshot" src="images/ng.png" />
+        <span>some Text</span>
+        <ul class="menu">
+
+            <li class="active">@Html.ActionLink("Home", "index")</li>
+            <li>@Html.ActionLink("About", "About")</li>
+            <li>@Html.ActionLink("Contact", "Contact")</li>
+            @* Im a tag helper!!!!! *@
+            <li><a asp-controller="App" asp-action="Contact">New Style Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="wrapper">
+        <div>@RenderBody()</div>
+        <div id="footer">
+            2015 base on ps video
+        </div>
+    </div>
+</body>
+</html>
