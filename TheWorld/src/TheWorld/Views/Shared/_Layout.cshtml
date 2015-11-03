@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootswatch/slate/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/styles/site.css" rel="stylesheet" />
 </head>
 <body>
@@ -20,10 +23,24 @@
     </div>
 
     <div id="wrapper">
-        <div>@RenderBody()</div>
-        <div id="footer">
-            2015 base on ps video
+        <div id="main">
+            <div>
+                <button id="sidebarToggle" class="btn btn-success btn-sm">
+                    <i class="fa fa-angle-left"></i>
+                    @*<i class="glyphicon glyphicon-chevron-left"></i>*@
+                </button>
+            </div>
+
+            <div>@RenderBody()</div>
+            <div id="footer">
+                <p class="text-primary">2015 base on ps video</p>
+            </div>
         </div>
     </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/scripts/site.js"></script>
+
+    @RenderSection("Scripts", false)
 </body>
 </html>
